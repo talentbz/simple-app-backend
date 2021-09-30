@@ -21,6 +21,9 @@ class APIController extends Controller
             ]);
             
             if(Auth::attempt($users)){
+                // $email = $users['email'];
+                // dd($email);
+                // $username = User::select('username')->where('email', $email)->get();
                 return response()->json(['result' => true, 'data' => $users]);
             } else {
                 return response()->json(['result' => false, 'message' => 'No user']);
@@ -28,7 +31,6 @@ class APIController extends Controller
         } catch (Exception $e) {
             return response()->json(['result' => false, 'message' => $e->getMessage()]);
         }
-         
     }
 
     public function search(Request $request) 
@@ -39,7 +41,7 @@ class APIController extends Controller
                           ->where('items.item_name', 'LIKE', "%{$data}%")
                           ->orWhere('items.item_title', 'LIKE', "%{$data}%")
                           ->orWhere('items.item_description', 'LIKE', "%{$data}%")
-                          ->orWhere('items.item_origin1', 'LIKE', "%{$data}%")
+                          ->orWhere('items.item_origin', 'LIKE', "%{$data}%")
                           ->get();      
             return response()->json(['result' => true, 'data' => $items]);
         } catch (Exception $e) {

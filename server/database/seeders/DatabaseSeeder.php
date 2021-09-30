@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $root_url = 'https://trucker.sebthe.ninja';
         //user table seed
         DB::table('users')->insert([
             [
@@ -131,57 +132,57 @@ class DatabaseSeeder extends Seeder
         DB::table('item_images')->insert([
             [
                 'item_id'        => 1,
-                'item_url_top'   => 'images/image0_1.png',
-                'item_url_1'     => 'images/image1_1.png',       
-                'item_url_2'     => 'images/image2_1.png',
+                'item_url_top'   => $root_url.'/images/image0_1.png',
+                'item_url_1'     => $root_url.'/images/image1_1.png',       
+                'item_url_2'     => $root_url.'/images/image2_1.png',
                 'item_url_3'     => '',
             ],
             [
                 'item_id'        => 2,
-                'item_url_top'   => 'images/image0_2.png',
-                'item_url_1'     => 'images/image1_2.png',       
-                'item_url_2'     => 'images/image2_2.png',
+                'item_url_top'   => $root_url.'/images/image0_2.png',
+                'item_url_1'     => $root_url.'/images/image1_2.png',       
+                'item_url_2'     => $root_url.'/images/image2_2.png',
                 'item_url_3'     => '',
             ],
             [
                 'item_id'        => 3,
-                'item_url_top'   => 'images/image0_3.png',
-                'item_url_1'     => 'images/image1_3.png',       
-                'item_url_2'     => 'images/image2_3.png',
+                'item_url_top'   => $root_url.'/images/image0_3.png',
+                'item_url_1'     => $root_url.'/images/image1_3.png',       
+                'item_url_2'     => $root_url.'/images/image2_3.png',
                 'item_url_3'     => '',
             ],
             [
                 'item_id'        => 4,
-                'item_url_top'   => 'images/image0_4.png',
-                'item_url_1'     => 'images/image1_4.png',       
-                'item_url_2'     => 'images/image2_4.png',
+                'item_url_top'   => $root_url.'/images/image0_4.png',
+                'item_url_1'     => $root_url.'/images/image1_4.png',       
+                'item_url_2'     => $root_url.'/images/image2_4.png',
                 'item_url_3'     => '',
             ],
             [
                 'item_id'        => 5,
-                'item_url_top'   => 'images/image0_5.png',
-                'item_url_1'     => 'images/image1_5.png',       
+                'item_url_top'   => $root_url.'/images/image0_5.png',
+                'item_url_1'     => $root_url.'/images/image1_5.png',       
                 'item_url_2'     => '',
                 'item_url_3'     => '',
             ],
             [
                 'item_id'        => 6,
-                'item_url_top'   => 'images/image0_6.png',
-                'item_url_1'     => 'images/image1_6.png',       
+                'item_url_top'   => $root_url.'/images/image0_6.png',
+                'item_url_1'     => $root_url.'/images/image1_6.png',       
                 'item_url_2'     => '',
                 'item_url_3'     => '',
             ],
             [
                 'item_id'        => 7,
-                'item_url_top'   => 'images/image0_7.png',
+                'item_url_top'   => $root_url.'/images/image0_7.png',
                 'item_url_1'     => '',       
                 'item_url_2'     => '',
                 'item_url_3'     => '',
             ],
             [
                 'item_id'        => 8,
-                'item_url_top'   => 'images/image0_8.png',
-                'item_url_1'     => 'images/image1_8.png',       
+                'item_url_top'   => $root_url.'/images/image0_8.png',
+                'item_url_1'     => $root_url.'/images/image1_8.png',       
                 'item_url_2'     => '',
                 'item_url_3'     => '',
             ],
@@ -194,10 +195,10 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'item_id'        => 10,
-                'item_url_top'   => 'images/image0_9.png',
-                'item_url_1'     => 'images/image1_9.png',       
-                'item_url_2'     => 'images/image2_9.png',
-                'item_url_3'     => 'images/image3_9.png',
+                'item_url_top'   => $root_url.'/images/image0_9.png',
+                'item_url_1'     => $root_url.'/images/image1_9.png',       
+                'item_url_2'     => $root_url.'/images/image2_9.png',
+                'item_url_3'     => $root_url.'/images/image3_9.png',
             ],
         ]);
     }
